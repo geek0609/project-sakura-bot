@@ -1,0 +1,22 @@
+name: Sakura-Bot
+on:
+  schedule:
+    - cron: '0 */05 * * *'
+  workflow_dispatch:
+
+jobs:
+  postman:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Dep
+        run: sudo pip install python-telegram-bot
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bot
+        run: sudo -E python3 main.py
+        env:
+          BOT_API: ${{ secrets.BOT_API }}
+          CHAT: ${{ secrets.CHAT }}
