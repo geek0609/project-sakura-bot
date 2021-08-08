@@ -25,7 +25,7 @@ import json
 BOT_API = os.environ.get("BOT_API")
 
 bot = Bot(BOT_API)
-updater = Updater(BOT_API, use_context=True)
+updater = Updater(BOT_API, use_context=True, workers=128)
 dispatcher = updater.dispatcher
 timeout = 60
 
