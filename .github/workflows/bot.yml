@@ -16,7 +16,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Bot
-        run: sudo -E python3 main.py
+        run: sudo -E python3 sakura_bot
         env:
           BOT_API: ${{ secrets.BOT_API }}
           CHAT: ${{ secrets.CHAT }}

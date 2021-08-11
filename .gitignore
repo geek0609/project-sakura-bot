@@ -1,2 +1,4 @@
 .venv
 .idea
+sakura_bot/__pycache__
+sakura_bot/sakura/__pycache__
