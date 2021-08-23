@@ -73,7 +73,7 @@ def get_device_info(device):
 
 def cook_content(information):
     if not information:
-        return "Device not found, make sure you are typing see /help for more"
+        return "Device not found, make sure you are typing the correct codename (case sensitive), you can do /list to find out the codename. See /help for more"
 
     if information["active"]:
         active_status = "✅ This device is currently <b>officially supported</b>"
